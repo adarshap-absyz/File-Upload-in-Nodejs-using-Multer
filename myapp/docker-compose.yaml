@@ -1,0 +1,21 @@
+version: '3'
+services:
+  node-app:
+    build:
+      context: .
+      target: build
+    ports:
+      - "80:5000"
+    restart: always
+    volumes:
+    - ./app:/src/app
+    environment:
+      - NODE_ENV=development
+    command: node app.js
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: "mailhog"
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
