@@ -20,4 +20,9 @@ COPY . .
 EXPOSE 5000
 
 # Start the Express.js application
-CMD ["npm", "start"]
+# Install Nginx and copy the configuration file
+RUN apt-get update && apt-get install -y nginx
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+# Start Nginx and the Node.js application
+CMD service nginx start && npm start
