@@ -6,4 +6,4 @@ app.use(bodyParser.urlencoded({extended: true}))
 var uploadRouter = require('./routes/upload');
 app.use('/', uploadRouter);
  
-app.listen(3000, () => console.log('Server started on port 3000'));
+app.listen(8080, () => console.log('Server started on port 8080'));
