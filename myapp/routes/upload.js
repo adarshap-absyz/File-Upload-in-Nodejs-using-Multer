@@ -53,8 +53,8 @@ router.route('/callback')
       var data = req.body.json ?? undefined;
       const SMTP_HOST='email-smtp.ap-south-1.amazonaws.com'
       SMTP_PORT=465
-      SMTP_USER="AKIAZZVFYRXGUACHAIXF"
-      SMTP_PASSWORD="BALdI4Kt2mJSOtuZpK1KXrOVtOfW6zEn1ChDngkn2ppo"
+      SMTP_USER="AKIAZZVFYRXGUACHAIXFA"
+      SMTP_PASSWORD="BALdI4Kt2mJSOtuZpK1KXrOVtOfW6zEn1ChDngkn2ppoa"
       SMTP_FROM_EMAIL="apps@absyz.com"
       
       var transporter = nodemailer.createTransport({
